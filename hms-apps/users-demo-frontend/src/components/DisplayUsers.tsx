@@ -39,6 +39,7 @@ type Props = {
     data: User[]
 }
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const columns: ColumnDef<User>[] = [
     {
         id: "select",
@@ -116,7 +117,7 @@ export const columns: ColumnDef<User>[] = [
                     <DropdownMenuContent align="end">
                         <DropdownMenuLabel>Actions</DropdownMenuLabel>
                         <DropdownMenuItem
-                            onClick={() => navigator.clipboard.writeText(user.id)}
+                            onClick={() => navigator.clipboard.writeText(user.id || '')}
                         >
                             Copy user ID
                         </DropdownMenuItem>
