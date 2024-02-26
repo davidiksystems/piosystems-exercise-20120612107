@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
@@ -8,9 +7,9 @@ import { join } from 'path';
 @Module({
   imports: [
     ServeStaticModule.forRoot({
-      rootPath: join(__dirname, '../../../..', 'hms-apps/users-demo-frontend/src/App'), 
-    }),
-  ],
+    rootPath: join(__dirname, '../../../..', 'demo-frontend','dist'),
+  }),
+],
   controllers: [AppController],
   providers: [AppService],
 })
